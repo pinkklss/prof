@@ -3,7 +3,7 @@ import pprint
 
 def introspection_info(obj):
     result = {
-        'Атрибуты объекта': __dict__(obj, '__methods__', []),
+        'Атрибуты объекта': getattr(obj, '__methods__', []),
         'Тип объекта': type(obj),
         'Методы': dir(obj),
         'Модуль': obj.__mod__,
